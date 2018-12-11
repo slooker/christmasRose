@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label color="primary">Name:</ion-label>
+      <ion-input required type="text" placeholder="Name" [(ngModel)]="item.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Count:</ion-label>
+      <ion-input required type="number" placeholder="Count" [(ngModel)]="item.count"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Gender:</ion-label>
+      <ion-input required type="text" placeholder="Gender" [(ngModel)]="item.gender"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Type:</ion-label>
+      <ion-input required type="text" placeholder="ItemType" [(ngModel)]="item.itemType"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Location:</ion-label>
+      <ion-input required type="text" placeholder="Location" [(ngModel)]="item.location"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Notes:</ion-label>
+      <ion-input required type="text" placeholder="Notes" [(ngModel)]="item.notes"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Size:</ion-label>
+      <ion-input required type="text" placeholder="Size" [(ngModel)]="item.size"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="saveItem()">Save</ion-button>
+</ion-content>
+
+
+<!-- name: string;
+count: number;
+gender: string;
+itemType: string;
+location: string;
+notes: string;
+size: string;
+createdAt: number; -->
