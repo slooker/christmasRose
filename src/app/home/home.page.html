@@ -9,14 +9,38 @@
 <ion-content>
   <ion-grid>
     <ion-row class="row">
-          <ion-col class="col">Name</ion-col>
-          <ion-col class="col">Gender</ion-col>
-          <ion-col class="col">Age</ion-col>
-          <ion-col class="col">Type</ion-col>
-          <ion-col class="col">Amount</ion-col>
-          <ion-col class="col">Size</ion-col>
-          <ion-col class="col">Location</ion-col>
-          <ion-col class="col">Notes</ion-col>
+          <ion-col class="col">Name 
+            <ion-icon name="arrow-up" (click)="handleSort('name', 'alpha')"></ion-icon>
+            <ion-icon name="arrow-down" (click)="handleSort('name', 'reverseAlpha')"></ion-icon>
+          </ion-col>
+          <ion-col class="col">Gender
+            <ion-icon name="arrow-up" (click)="handleSort('gender', 'alpha')"></ion-icon>
+            <ion-icon name="arrow-down" (click)="handleSort('gender', 'reverseAlpha')"></ion-icon>
+          </ion-col>
+          <ion-col class="col">Age
+            <ion-icon name="arrow-up" (click)="handleSort('age', 'alpha')"></ion-icon>
+            <ion-icon name="arrow-down" (click)="handleSort('age', 'reverseAlpha')"></ion-icon>
+          </ion-col>
+          <ion-col class="col">Type
+            <ion-icon name="arrow-up" (click)="handleSort('itemType', 'alpha')"></ion-icon>
+            <ion-icon name="arrow-down" (click)="handleSort('itemType', 'reverseAlpha')"></ion-icon>
+          </ion-col>
+          <ion-col class="col">Amount
+            <ion-icon name="arrow-up" (click)="handleSort('count', 'alpha')"></ion-icon>
+            <ion-icon name="arrow-down" (click)="handleSort('count', 'reverseAlpha')"></ion-icon>
+          </ion-col>
+          <ion-col class="col">Size
+            <ion-icon name="arrow-up" (click)="handleSort('size', 'alpha')"></ion-icon>
+            <ion-icon name="arrow-down" (click)="handleSort('size', 'reverseAlpha')"></ion-icon>
+          </ion-col>
+          <ion-col class="col">Location
+            <ion-icon name="arrow-up" (click)="handleSort('location', 'alpha')"></ion-icon>
+            <ion-icon name="arrow-down" (click)="handleSort('location', 'reverseAlpha')"></ion-icon>
+          </ion-col>
+          <ion-col class="col">Notes
+            <ion-icon name="arrow-up" (click)="handleSort('notes', 'alpha')"></ion-icon>
+            <ion-icon name="arrow-down" (click)="handleSort('notes', 'reverseAlpha')"></ion-icon>
+          </ion-col>
           <ion-col class="col">Manage</ion-col>
     </ion-row>
 

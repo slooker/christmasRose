@@ -9,6 +9,8 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
   items: Item[];
+  sortField: string;
+  sortOrder: string;
  
   constructor(private itemService: ItemService, private alertCtrl: AlertController) { }
  
@@ -16,6 +18,25 @@ export class HomePage implements OnInit {
     this.itemService.getItems().subscribe(res => {
       this.items = res;
     });
+  }
+
+  handleSort(sortField, sortOption) {
+    this.items = this.items.sort((a,b) => {
+      if (sortOption === "alpha") {
+        if (a[sortField] < b[sortField])
+          return -1;
+        if (a[sortField] > b[sortField])
+          return 1;
+        return 0;
+      }
+      if (sortOption === "reverseAlpha") {
+        if (a[sortField] > b[sortField])
+          return -1;
+        if (a[sortField] < b[sortField])
+          return 1;
+        return 0;
+      }
+    })
   }
  
   remove(name, id) {
