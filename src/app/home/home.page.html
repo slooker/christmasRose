@@ -25,13 +25,13 @@
             <ion-col class="col">{{item.gender}}</ion-col>
             <ion-col class="col">{{item.age}}</ion-col>
             <ion-col class="col">{{item.itemType}}</ion-col>
-            <ion-col class="col">{{item.amount}}</ion-col>
+            <ion-col class="col">{{item.count}}</ion-col>
             <ion-col class="col">{{item.size}}</ion-col>
             <ion-col class="col">{{item.location}}</ion-col>
             <ion-col class="col">{{item.notes}}</ion-col>
             <ion-col class="col">
               <ion-button href="/edit/{{item.id}}"><ion-icon name="build"></ion-icon></ion-button>
-              <ion-button ><ion-icon name="close"></ion-icon></ion-button>
+              <ion-button (click)="remove(item.name, item.id)"><ion-icon name="close"></ion-icon></ion-button>
             </ion-col>
 
 
