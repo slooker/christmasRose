@@ -17,6 +17,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.itemService.getItems().subscribe(res => {
       this.items = res;
+      this.handleSort("location", "alpha")
     });
   }
 

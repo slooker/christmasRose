@@ -10,13 +10,13 @@ import { NavController, LoadingController } from '@ionic/angular';
 })
 export class ItemEditPage implements OnInit {
   item: Item = {
-    name: 'test',
-    count: 30,
-    gender: 'male',
-    itemType: 'fake item',
-    location: 'no location',
+    name: '',
+    count: 0,
+    gender: '',
+    itemType: '',
+    location: '',
     notes: '',
-    size: 'no size',
+    size: '',
     createdAt: new Date().getTime(),
   };
  
@@ -44,7 +44,6 @@ export class ItemEditPage implements OnInit {
   }
  
   async saveItem() {
- 
     const loading = await this.loadingController.create({
       message: 'Saving Item..'
     });

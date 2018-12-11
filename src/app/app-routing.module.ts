@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'edit/:id',
     loadChildren: './item-edit/item-edit.module#ItemEditPageModule'
+  },
+  {
+    path: 'add',
+    loadChildren: './item-edit/item-edit.module#ItemEditPageModule'
   }
 ];
 
